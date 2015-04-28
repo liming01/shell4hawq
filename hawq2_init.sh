@@ -39,10 +39,10 @@ mkdir -p $HAWQ_DATA_DIR/master $HAWQ_DATA_DIR/segment $HAWQ_DATA_DIR/temp/master
 
 rm -rf /tmp/.s.PGSQL.*.lock
 
-$GPHOME/bin/hawq init master 
-$GPHOME/bin/hawq init segment 
+$GPHOME/bin/hawq init master -a
+$GPHOME/bin/hawq init segment -a
 
-#$GPHOME/bin/hawq cluster start
+#$GPHOME/bin/hawq start cluster -a
 
 echo -ne "\n[NOTICE]: Run \"alias\" to fetch other commands without thinking path dependency! \n"
 ################

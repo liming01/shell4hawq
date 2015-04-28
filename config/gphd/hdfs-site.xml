@@ -52,11 +52,11 @@
    </property>
     <property>
       	<name>dfs.namenode.name.dir</name>
-		<value>file:/Users/gpadmin/temp/gphd/name</value>
+		<value>file:$HOME/temp/gphd/name</value>
 	</property>
     <property>
       	<name>dfs.datanode.data.dir</name>
-		<value>file:/Users/gpadmin/temp/gphd/data</value>
+		<value>file:$HOME/temp/gphd/data</value>
 	</property>
 	
 

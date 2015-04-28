@@ -5,11 +5,9 @@ export MASTER_DATA_DIRECTORY=$HAWQ_DATA_DIR/data/master/gpseg-1
 
 source $GPHOME/greenplum_path.sh
 
-alias mdd='cd $HAWQ_DATA_DIR/data/master'
-alias sdd='cd $HAWQ_DATA_DIR/data/segment'
+alias mdd='cd $HAWQ_DATA_DIR/master'
+alias sdd='cd $HAWQ_DATA_DIR/segment'
 
-alias gpstart=$GPHOME/bin/gpstart 
-alias gpstop=$GPHOME/bin/gpstop
 
 echo -ne "[NOTICE]: Run: \"alias\" to fetch other commands without thinking path dependency! \n"
-echo -ne "[NOTICE]: Run: \"hawq_init.sh\", \"gpstart\", \"gpstop\"\n"
+echo -ne "[NOTICE]: Run: \"hawq2_init.sh\", \"hawq start cluster -a\", \"hawq stop cluster -a\"\n"
