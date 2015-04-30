@@ -11,11 +11,6 @@
     </property>
 
     <property>
-        <name>hawq_standby_address_host</name>
-        <value>localhost</value>
-    </property>
-
-    <property>
         <name>hawq_segment_address_port</name>
         <value>31100</value>
     </property>

@@ -44,6 +44,8 @@ mkdir -p $HAWQ_DATA_DIR/data/master $HAWQ_DATA_DIR/data/primary $HAWQ_DATA_DIR/d
 
 rm -rf /tmp/.s.PGSQL.*.lock
 
+$HADOOP_PREFIX/bin/hdfs dfs -rm -R /$HAWQ_ABBR
+
 $GPHOME/bin/gpinitsystem -a -c $SCRIPT_PATH/config/$HAWQ_ABBR/gpinitsystem_config -h $GPHOME/bin/my_host
 
 echo -ne "\n[NOTICE]: Run \"alias\" to fetch other commands without thinking path dependency! \n"
