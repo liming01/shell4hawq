@@ -41,10 +41,11 @@ source $GPHOME/greenplum_path.sh
 
 rm -rf $HAWQ_DATA_DIR/data/master $HAWQ_DATA_DIR/data/primary $HAWQ_DATA_DIR/data1/primary $HAWQ_DATA_DIR/data2/primary
 mkdir -p $HAWQ_DATA_DIR/data/master $HAWQ_DATA_DIR/data/primary $HAWQ_DATA_DIR/data1/primary $HAWQ_DATA_DIR/data2/primary
+mkdir -p $HOME/temp/hawq1/data1/tmp $HOME/temp/hawq1/data2/tmp
 
 rm -rf /tmp/.s.PGSQL.*.lock
 
-$HADOOP_PREFIX/bin/hdfs dfs -rm -R /$HAWQ_ABBR
+$HADOOP_PREFIX/bin/hdfs dfs -rm -R /$HAWQ_ABBR/
 
 $GPHOME/bin/gpinitsystem -a -c $SCRIPT_PATH/config/$HAWQ_ABBR/gpinitsystem_config -h $GPHOME/bin/my_host
 

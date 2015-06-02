@@ -24,6 +24,7 @@ PORT_BASE=40000
 #### the specified interface addresses).
 declare -a DATA_DIRECTORY=($HOME/temp/hawq1/data1/primary $HOME/temp/hawq1/data1/primary  $HOME/temp/hawq1/data2/primary $HOME/temp/hawq1/data2/primary)
 
+declare -a TEMP_DIRECTORY=($HOME/temp/hawq1/data1/tmp $HOME/temp/hawq1/data2/tmp)
 #### OS-configured hostname or IP address of the master host.
 MASTER_HOSTNAME=localhost
 
