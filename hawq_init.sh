@@ -41,7 +41,7 @@ source $GPHOME/greenplum_path.sh
 
 rm -rf $HAWQ_DATA_DIR/data/master $HAWQ_DATA_DIR/data/primary $HAWQ_DATA_DIR/data1/primary $HAWQ_DATA_DIR/data2/primary
 mkdir -p $HAWQ_DATA_DIR/data/master $HAWQ_DATA_DIR/data/primary $HAWQ_DATA_DIR/data1/primary $HAWQ_DATA_DIR/data2/primary
-mkdir -p $HOME/temp/hawq1/data1/tmp $HOME/temp/hawq1/data2/tmp
+mkdir -p $HOME/temp/hawq1/data1/tmp1 $HOME/temp/hawq1/data1/tmp2 $HOME/temp/hawq1/data2/tmp1 $HOME/temp/hawq1/data2/tmp2
 
 rm -rf /tmp/.s.PGSQL.*.lock
 
