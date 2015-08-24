@@ -19,11 +19,11 @@ popd  > /dev/null
 CURRENT_DIR=`pwd`
 
 ################
-$HADOOP_PREFIX/sbin/stop-dfs.sh 
+$HADOOP_HOME/sbin/stop-dfs.sh 
 
 #replace '$HOME'&'$USER' in config file, and copy into destination.
 CPY_SRC=$SCRIPT_PATH/config/$HADOOP_ABBR/
-CPY_DES=$HADOOP_PREFIX/etc/hadoop/
+CPY_DES=$HADOOP_HOME/etc/hadoop/
 for i in `find $CPY_SRC \( -name "*.xml" -or -name "*conifg" \) -type f -exec basename {} \;` ; do 
 	echo "=== copy $CPY_SRC/$i to $CPY_DES/$i ===\n";
 	sed "s#\$HOME/#$HOME/#g; s#\$USER#$USER#g" "$CPY_SRC/$i" > "$CPY_DES/$i"; 
@@ -34,8 +34,8 @@ rm -rf   $HADOOP_DATA
 mkdir -p $HADOOP_DATA/name
 mkdir -p $HADOOP_DATA/data
 
-$HADOOP_PREFIX/bin/hdfs namenode -format
-$HADOOP_PREFIX/sbin/start-dfs.sh 
+$HADOOP_HOME/bin/hdfs namenode -format
+$HADOOP_HOME/sbin/start-dfs.sh 
 
 echo -ne "\n[NOTICE]: Run \"alias\" to fetch other commands without thinking path dependency!\n"
 ################

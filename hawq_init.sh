@@ -45,7 +45,8 @@ mkdir -p $HOME/temp/hawq1/data1/tmp1 $HOME/temp/hawq1/data1/tmp2 $HOME/temp/hawq
 
 rm -rf /tmp/.s.PGSQL.*.lock
 
-$HADOOP_PREFIX/bin/hdfs dfs -rm -R /$HAWQ_ABBR/
+$HADOOP_HOME/bin/hdfs dfsadmin -safemode leave
+$HADOOP_HOME/bin/hdfs dfs -rm -R /$HAWQ_ABBR/
 
 $GPHOME/bin/gpinitsystem -a -c $SCRIPT_PATH/config/$HAWQ_ABBR/gpinitsystem_config -h $GPHOME/bin/my_host
 

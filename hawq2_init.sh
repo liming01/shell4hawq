@@ -39,7 +39,8 @@ mkdir -p $HAWQ_DATA_DIR/master $HAWQ_DATA_DIR/segment $HAWQ_DATA_DIR/temp/master
 
 rm -rf /tmp/.s.PGSQL.*.lock
 
-$HADOOP_PREFIX/bin/hdfs dfs -rm -R /hawq2/
+$HADOOP_HOME/bin/hdfs dfsadmin -safemode leave
+$HADOOP_HOME/bin/hdfs dfs -rm -R /hawq2/
 
 $GPHOME/bin/hawq init cluster -a
 
