@@ -21,9 +21,11 @@ CURRENT_DIR=`pwd`
 ################ workaround for dependency of new Mac OSX ################
 unamestr=`uname`
 if [[ "$unamestr" == 'Darwin' ]]; then
-cp -rf /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libz* /opt/releng/tools/third-party/ext/1.0/osx105_x86/lib/
-cp -rf /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libz* ~/workspace/hawq1/greenplum-db-devel/lib/
-cp -rf /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libz* ~/workspace/hawq1/ext/osx106_x86/lib/
+cd /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/
+
+cp -rf libz* libxslt* libxml* /opt/releng/tools/zlib/zlib/1.2.3/osx106_x86/lib/
+cp -rf libz* libxslt* libxml* ~/workspace/hawq2/greenplum-db-devel/lib/
+cp -rf libz* libxslt* libxml* ~/workspace/hawq2/ext/osx106_x86/lib/
 fi
 ################
 rm -rf $GPHOME/bin/my_host
