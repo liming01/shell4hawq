@@ -19,11 +19,11 @@ if [[ "$unamestr" == 'Darwin' ]]; then
 cd /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/
 
 cp -rf libz* libxslt* libxml* /opt/releng/tools/zlib/zlib/1.2.3/osx106_x86/lib/
-cp -rf libz* libxslt* libxml* ~/workspace/hawq2/greenplum-db-devel/lib/
+cp -rf libz* libxslt* libxml* ~/workspace/hawq2/hawq-db-devel/lib/
 cp -rf libz* libxslt* libxml* ~/workspace/hawq2/ext/osx106_x86/lib/
 fi
 ################
-export GPHOME=$HOME/workspace/hawq2/greenplum-db-devel
+export GPHOME=$HOME/workspace/hawq2/hawq-db-devel
 export HAWQ_ABBR=hawq2
 export HAWQ_DATA_DIR=~/temp/$HAWQ_ABBR
 
