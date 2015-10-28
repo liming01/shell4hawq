@@ -62,7 +62,7 @@
     </property>
 
     <property>
-        <name>hawq_resourcemanager_server_type</name>
+        <name>hawq_global_rm_type</name>
         <value>none</value>
     </property>
 
