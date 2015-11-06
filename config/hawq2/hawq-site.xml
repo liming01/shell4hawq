@@ -3,175 +3,100 @@
     <property>
         <name>hawq_master_address_host</name>
         <value>localhost</value>
+        <description>The host name of hawq master.</description>
     </property>
 
     <property>
         <name>hawq_master_address_port</name>
         <value>5432</value>
+        <description>The port of hawq master.</description>
     </property>
 
     <property>
         <name>hawq_segment_address_port</name>
-        <value>31100</value>
+        <value>40000</value>
+        <description>The port of hawq segment.</description>
     </property>
 
     <property>
         <name>hawq_dfs_url</name>
         <value>localhost:9000/hawq2</value>
+        <description>URL for accessing HDFS.</description>
     </property>
 
     <property>
         <name>hawq_master_directory</name>
         <value>$HOME/temp/hawq2/master</value>
+        <description>The directory of hawq master.</description>
     </property>
 
     <property>
         <name>hawq_segment_directory</name>
         <value>$HOME/temp/hawq2/segment</value>
+        <description>The directory of hawq segment.</description>
     </property>
 
     <property>
         <name>hawq_master_temp_directory</name>
         <value>$HOME/temp/hawq2/temp/master</value>
+        <description>The temporary directory reserved for hawq master.</description>
     </property>
 
     <property>
         <name>hawq_segment_temp_directory</name>
-        <value>$HOME/temp/hawq2/temp/segment</value>
+        <value>/tmp</value>
+        <description>The temporary directory reserved for hawq segment.</description>
     </property>
-
-    <property>
-        <name>hawq_resourcemanager_tempdirs</name>
-        <value>$HOME/temp/hawq2/temp/resourcemanager</value>
-    </property>
-
+     
     <!-- HAWQ resource manager parameters -->
-    <property>
-        <name>hawq_resourcemanager_master_address_domainsocket_port</name>
-        <value>5436</value>
-    </property>
-
-    <property>
-        <name>hawq_resourcemanager_master_address_port</name>
-        <value>5437</value>
-    </property>
-
-    <property>
-        <name>hawq_resourcemanager_segment_address_port</name>
-        <value>5438</value>
-    </property>
-
     <property>
         <name>hawq_global_rm_type</name>
         <value>none</value>
+        <description>The resource manager type to start for allocating resource. 
+                     'none' means hawq resource manager exclusively uses whole
+                     cluster; 'yarn' means hawq resource manager contacts YARN
+                     resource manager to negotiate resource.
+        </description>
     </property>
 
     <property>
-        <name>hawq_resourcemanager_segment_limit_memory_use</name>
+        <name>hawq_rm_memory_limit_perseg</name>
         <value>64GB</value>
+        <description>The limit of memory usage in a hawq segment when 
+                     hawq_global_rm_type is set 'none'.
+        </description>
     </property>
 
     <property>
-        <name>hawq_resourcemanager_segment_limit_core_use</name>
+        <name>hawq_rm_nvcore_limit_perseg</name>
         <value>16</value>
+        <description>The limit of virtual core usage in a hawq segment when 
+                     hawq_global_rm_type is set 'none'.
+        </description>
+    </property>
+    
+    <property>
+        <name>hawq_rm_yarn_address</name>
+        <value>localhost:8032</value>
+        <description>The address of YARN resource manager server.</description>
     </property>
 
     <property>
-        <name>hawq_resourcemanager_yarn_resourcemanager_address</name>
-        <value>0.0.0.0:9980</value>
+        <name>hawq_rm_yarn_scheduler_address</name>
+        <value>localhost:8030</value>
+        <description>The address of YARN scheduler server.</description>
     </property>
 
     <property>
-        <name>hawq_resourcemanager_yarn_resourcemanager_scheduler_address</name>
-        <value>0.0.0.0:9981</value>
-    </property>
-
-    <property>
-        <name>hawq_resourcemanager_yarn_queue</name>
+        <name>hawq_rm_yarn_queue_name</name>
         <value>default</value>
+        <description>The YARN queue name to register hawq resource manager.</description>
     </property>
 
     <property>
-        <name>hawq_resourcemanager_yarn_application_name</name>
-        <value>hawqut</value>
-    </property>
-
-    <property>
-        <name>hawq_resourcemanager_log_level</name>
-        <value>15</value>
-    </property>
-
-    <!-- HAWQ resource enforcement parameters -->
-    <property>
-        <name>hawq_resourceenforcer_cpu_enable</name>
-        <value>false</value>
-    </property>
-
-    <property>
-        <name>hawq_resourceenforcer_blkio_enable</name>
-        <value>false</value>
-    </property>
-
-    <property>
-    	<name>hawq_resourceenforcer_memory_policy</name>
-    	<value>VM_PROTECT</value>
-    </property>
-
-    <property>
-        <name>hawq_resourceenforcer_cgroup_mount_point</name>
-        <value>/cgroup</value>
-    </property>
-
-    <property>
-        <name>hawq_resourceenforcer_cgroup_hierarchy_name</name>
-        <value>hadoop-yarn</value>
-    </property>
-
-    <property>
-        <name>hawq_resourceenforcer_cleanup_period</name>
-        <value>600</value>
-    </property>
-    <property>
-        <name>hawq_resourceenforcer_cgroup_timeout</name>
-        <value>7200</value>
-    </property>
-
-    <property>
-        <name>hawq_resourceenforcer_weight_cpu</name>
-        <value>1024.0</value>
-    </property>
-    <property>
-        <name>hawq_resourceenforcer_weight_memory</name>
-        <value>2.0</value>
-    </property>
-    <property>
-        <name>hawq_resourceenforcer_weight_blkio</name>
-        <value>1024.0</value>
-    </property>
-
-    <property>
-        <name>hawq_resourceenforcer_ratio_vcore_pcore</name>
-        <value>1.0</value>
-    </property>
-    <property>
-        <name>hawq_resourceenforcer_ratio_vmemo_pmemo</name>
-        <value>1.0</value>
-    </property>
-    <property>
-        <name>hawq_resourceenforcer_ratio_vdisk_pdisk</name>
-        <value>1.0</value>
-    </property>
-    <!-- HAWQ resource enforcement parameters ends here_ -->
-
-    <!-- Will be remove soon -->
-    <property>
-        <name>hawq_data_directory_prefix</name>
-        <value>releng</value>
-    </property>
-
-    <property>
-        <name>dfs_allow_truncate</name>
-        <value>true</value>
+        <name>hawq_rm_yarn_app_name</name>
+        <value>hawq</value>
+        <description>The application name to register hawq resource manager in YARN.</description>
     </property>
 
 </configuration>
