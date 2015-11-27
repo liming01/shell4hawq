@@ -1,6 +1,8 @@
 export HADOOP_HOME=$HOME/workspace/install/hadoop-2.4.1-gphd-3.2.0.0
 export HADOOP_ABBR=gphd
 
+export PATH=$HADOOP_HOME/sbin/;$HADOOP_HOME/bin;$PATH
+
 alias start-dfs=$HADOOP_HOME/sbin/start-dfs.sh 
 alias stop-dfs=$HADOOP_HOME/sbin/stop-dfs.sh 
 
