@@ -5,7 +5,7 @@ export MASTER_DATA_DIRECTORY=$HAWQ_DATA_DIR/data/master/gpseg-1
 
 source $GPHOME/greenplum_path.sh
 
-export PATH=$GPHOME/bin;$PATH
+export PATH=$GPHOME/bin:$PATH
 
 alias mdd='cd $HAWQ_DATA_DIR/data/master'
 alias sdd='cd $HAWQ_DATA_DIR/data/segment'
