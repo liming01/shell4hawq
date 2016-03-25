@@ -21,7 +21,7 @@
         <name>dfs.replication</name>
         <value>1</value>
     </property>
-    
+
     <property>
        <name>dfs.datanode.data.dir.perm</name>
        <value>755</value>
@@ -29,8 +29,8 @@
        the DFS data node store its blocks. The permissions can either be octal or
        symbolic.</description>
     </property>
-    
-    
+
+
     <property>
       <name>dfs.support.append</name>
       <value>true</value>
@@ -52,13 +52,13 @@
    </property>
     <property>
       	<name>dfs.namenode.name.dir</name>
-		<value>file:$HOME/temp/gphd/name</value>
+		<value>file://$HOME/temp/gphd/name</value>
 	</property>
     <property>
       	<name>dfs.datanode.data.dir</name>
-		<value>file:$HOME/temp/gphd/data</value>
+		<value>file://$HOME/temp/gphd/data</value>
 	</property>
-	
+
 
    <property>
       <name>dfs.datanode.max.transfer.threads</name>
@@ -87,7 +87,7 @@
 		<name>ipc.client.connection</name>
       	<value>3</value>
    </property>
-   
+
    <property>
       <name>dfs.namenode.accesstime.precision</name>
       <value>-1</value>
