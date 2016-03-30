@@ -1,7 +1,7 @@
 export GPHOME=$HOME/workspace/hawq2/hawq-db-devel
 export HAWQ_ABBR=hawq2
 export HAWQ_DATA_DIR=~/temp/$HAWQ_ABBR
-export MASTER_DATA_DIRECTORY=$HAWQ_DATA_DIR/data/master/gpseg-1
+export MASTER_DATA_DIRECTORY=$HAWQ_DATA_DIR/master
 
 source $GPHOME/greenplum_path.sh
 
