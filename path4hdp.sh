@@ -1,4 +1,4 @@
-export HADOOP_HOME=$HOME/workspace/install/hadoop-2.4.1-gphd-3.2.0.0
+export HADOOP_HOME=$HOME/workspace/install/hadoop-2.6.0.3.0.0.0-249
 export HADOOP_ABBR=gphd
 
 export PATH=$HADOOP_HOME/sbin/:$HADOOP_HOME/bin:$PATH

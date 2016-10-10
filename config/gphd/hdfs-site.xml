@@ -44,6 +44,10 @@
        <value>false</value>
    </property>
    <property>
+    <name>dfs.domain.socket.path</name>
+    <value>/var/lib/hadoop-hdfs/dn_socket</value>
+   </property>
+   <property>
        <name>dfs.block.local-path-access.user</name>
        <value>$USER</value>
        <description>
